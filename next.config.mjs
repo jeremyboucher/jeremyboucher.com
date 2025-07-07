@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/jeremyboucher.com' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/jeremyboucher.com/' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -9,10 +11,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/logo-particles' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/logo-particles/' : '',
 }
 
 export default nextConfig
