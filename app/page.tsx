@@ -1,5 +1,13 @@
-import ThreeLogoParticles from "../three-logo-particles"
+import ThreeLogoParticles from "../components/three-logo-particles"
+import Header from "../components/header"
+import Footer from "../components/footer"
 
 export default function Page() {
-  return <ThreeLogoParticles />
+  return (
+    <main className="min-h-screen bg-black">
+      <Header />
+      <ThreeLogoParticles />
+      <Footer />
+    </main>
+  )
 }
